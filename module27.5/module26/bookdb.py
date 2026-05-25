@@ -20,37 +20,33 @@ def create_table():
             author TEXT NOT NULL
         )
     """)
-
-def create_table_recipes():
-    """Creates the books table in the database if it doesn't exist."""
-    connection = create_connection()
-    cursor = connection.cursor()
-    cursor.execute("""
-            CREATE TABLE IF NOT EXISTS recipes (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                title TEXT NOT NULL
-            )
-        """)
     connection.commit()
     connection.close()
 
 
+def create_table_recipes():
+    """Creates the recipes table in the database if it doesn't exist."""
+    connection = create_connection()
+    cursor = connection.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS recipes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL
+        )
+    """)
+    connection.commit()
+    connection.close()
+
+
+# Initialize the database table
 create_table()
 
 
 def create_book(book: BookCreate) -> int:
-    """
-    Adds a new book to the database.
-
-    Args:
-        book (bookCreate): A pydantic model containing the title and director of the book to be created.
-
-    Returns:
-        int: The ID of the newly created book in the database.
-    """
+    """Adds a new book to the database."""
     connection = create_connection()
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO books (title, director) VALUES (?, ?)", (book.title, book.director))
+    cursor.execute("INSERT INTO books (title, author) VALUES (?, ?)", (book.title, book.author))
     connection.commit()
     book_id = cursor.lastrowid
     connection.close()
@@ -58,32 +54,18 @@ def create_book(book: BookCreate) -> int:
 
 
 def read_books():
-    """
-    Retrieves all books from the database.
-
-    Returns:
-        list: A list of book models representing all books in the database.
-    """
+    """Retrieves all books from the database."""
     connection = create_connection()
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM books")
     rows = cursor.fetchall()
     connection.close()
-    books = [Book(id=row[0], title=row[1], director=row[2]) for row in rows]
+    books = [Book(id=row[0], title=row[1], author=row[2]) for row in rows]
     return books
 
 
 def read_book(book_id: int):
-    """
-    Retrieves a single book from the database by its ID.
-
-    Args:
-        book_id (int): The ID of the book to retrieve.
-
-    Returns:
-        book: A book model representing the retrieved book.
-        Returns None if the book is not found.
-    """
+    """Retrieves a single book from the database by its ID."""
     connection = create_connection()
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM books WHERE id = ?", (book_id,))
@@ -91,23 +73,14 @@ def read_book(book_id: int):
     connection.close()
     if row is None:
         return None
-    return Book(id=row["id"], title=row["title"], director=row["director"])
+    return Book(id=row["id"], title=row["title"], author=row["author"])
 
 
 def update_book(book_id: int, book: BookCreate) -> bool:
-    """
-    Updates an existing book in the database.
-
-    Args:
-        book_id (int): The ID of the book to update.
-        book (bookCreate): A pydantic model containing the new title and director of the book.
-
-    Returns:
-        bool: True if the book was updated successfully, False otherwise.
-    """
+    """Updates an existing book in the database."""
     connection = create_connection()
     cursor = connection.cursor()
-    cursor.execute("UPDATE books SET title = ?, director = ? WHERE id = ?", (book.title, book.director, book_id))
+    cursor.execute("UPDATE books SET title = ?, author = ? WHERE id = ?", (book.title, book.author, book_id))
     connection.commit()
     updated = cursor.rowcount
     connection.close()
@@ -115,15 +88,7 @@ def update_book(book_id: int, book: BookCreate) -> bool:
 
 
 def delete_book(book_id: int) -> bool:
-    """
-    Deletes a book from the database by its ID.
-
-    Args:
-        book_id (int): The ID of the book to delete.
-
-    Returns:
-        bool: True if the books was deleted successfully, False otherwise.
-    """
+    """Deletes a book from the database by its ID."""
     connection = create_connection()
     cursor = connection.cursor()
     cursor.execute("DELETE FROM books WHERE id = ?", (book_id,))
@@ -131,4 +96,3 @@ def delete_book(book_id: int) -> bool:
     deleted = cursor.rowcount
     connection.close()
     return deleted > 0
-
