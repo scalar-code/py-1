@@ -1,17 +1,27 @@
 import streamlit as st
 import requests
 
-st.title("Add a new book App")
+st.title("Book App")
+action = st.sidebar.selectbox("Action", ["Create", "Update", "Delete"])
+url = "http://127.0.0.1:8000"
 
-userinput = st.sidebar.selectbox("Please check one of the boxes true= Get ",["GetBook"])
+if action == "Create":
+    title = st.text_input("Title")
+    author = st.text_input("Author")
+    if st.button("Submit"):
+        requests.post(f"{url}/Books/", json={"title": title, "author": author})
+        st.write("Done")
 
-if userinput == "GetBook":
-    id = st.number_input("books_id")
-    if id:
-        response = requests.get(
-            f"http://127.0.0.1:8000/books_id={id}"
-        )
-        if response.status_code == 200:
-            id = st.number_input("books_id")
-            st.write("title", response.json()("books"))
-            st.write("author", response.json()("books"))
+elif action == "Update":
+    id = st.number_input("ID", step=1)
+    title = st.text_input("New Title")
+    author = st.text_input("New Author")
+    if st.button("Submit"):
+        requests.put(f"{url}/Book/{id}", json={"title": title, "author": author})
+        st.write("Done")
+
+elif action == "Delete":
+    id = st.number_input("ID", step=1)
+    if st.button("Delete"):
+        requests.delete(f"{url}/Book/{id}")
+        st.write("Done")
