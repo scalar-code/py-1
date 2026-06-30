@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModulProjekt — Architecture by Perparim Çalaj</title>
+    <meta name="description" content="ModulProjekt is a premier architecture firm led by Perparim Çalaj, specializing in modern minimalist residential and commercial design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <nav class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-mark">M</span>
+                <span class="nav__logo-text">ModulProjekt</span>
+            </a>
+            <ul class="nav__links">
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#services" class="nav__link">Services</a></li>
+                <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                <li><a href="#process" class="nav__link">Process</a></li>
+                <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+            </ul>
+            <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#about" class="mobile-menu__link">About</a></li>
+            <li><a href="#services" class="mobile-menu__link">Services</a></li>
+            <li><a href="#portfolio" class="mobile-menu__link">Portfolio</a></li>
+            <li><a href="#process" class="mobile-menu__link">Process</a></li>
+            <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero__bg" style="background-image: url('https://d8j0ntlcm91z4.cloudfront.net/user_3Fqn08064RkBJPwhFaWnRQxaNiZ/hf_20260630_112822_eedb4c7c-f81b-437b-b1e2-7d5ecc97259e.png');"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__lines">
+            <div class="hero__line hero__line--1"></div>
+            <div class="hero__line hero__line--2"></div>
+            <div class="hero__line hero__line--3"></div>
+        </div>
+        <div class="hero__content">
+            <div class="hero__eyebrow">Architecture Studio — Est. 2010</div>
+            <h1 class="hero__title">
+                <span>Designing</span>
+                <span class="hero__title--italic">Spaces That</span>
+                <span>Inspire</span>
+            </h1>
+            <p class="hero__subtitle">Perparim Çalaj and the ModulProjekt team create architectural experiences that blend function, beauty, and purpose.</p>
+            <div class="hero__actions">
+                <a href="#portfolio" class="btn btn--primary">View Projects</a>
+                <a href="#about" class="btn btn--ghost">Our Story</a>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+        <div class="hero__badge">
+            <div class="hero__badge-ring"></div>
+            <span>Award<br>Winning<br>Design</span>
+        </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker">
+        <div class="ticker__track">
+            <span>Residential Design</span><span class="ticker__dot">●</span>
+            <span>Commercial Architecture</span><span class="ticker__dot">●</span>
+            <span>Urban Planning</span><span class="ticker__dot">●</span>
+            <span>Interior Design</span><span class="ticker__dot">●</span>
+            <span>Sustainable Building</span><span class="ticker__dot">●</span>
+            <span>3D Visualization</span><span class="ticker__dot">●</span>
+            <span>Residential Design</span><span class="ticker__dot">●</span>
+            <span>Commercial Architecture</span><span class="ticker__dot">●</span>
+            <span>Urban Planning</span><span class="ticker__dot">●</span>
+            <span>Interior Design</span><span class="ticker__dot">●</span>
+            <span>Sustainable Building</span><span class="ticker__dot">●</span>
+            <span>3D Visualization</span><span class="ticker__dot">●</span>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__media">
+                    <div class="about__image-wrapper animate-on-scroll">
+                        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3Fqn08064RkBJPwhFaWnRQxaNiZ/hf_20260630_112835_27563a17-5aa5-4b0b-97f5-7213fee90f5a.png" alt="ModulProjekt — Meridian Office Complex" class="about__image">
+                        <div class="about__image-border"></div>
+                    </div>
+                    <div class="about__stats-card animate-on-scroll">
+                        <div class="about__stat">
+                            <span class="about__stat-number counter" data-target="15">0</span>
+                            <span class="about__stat-label">Years Experience</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number counter" data-target="120">0</span>
+                            <span class="about__stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-number counter" data-target="18">0</span>
+                            <span class="about__stat-label">Awards Won</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__content">
+                    <div class="section-label animate-on-scroll">Who We Are</div>
+                    <h2 class="section-title animate-on-scroll">Architecture is<br><em>the art of life</em></h2>
+                    <p class="about__lead animate-on-scroll">Founded by <strong>Perparim Çalaj</strong>, ModulProjekt has been shaping the built environment through thoughtful, human-centered design since 2010.</p>
+                    <p class="about__body animate-on-scroll">We believe every space tells a story. Our approach combines rigorous technical precision with artistic sensitivity, creating structures that not only stand the test of time but become beloved landmarks in their communities.</p>
+                    <div class="about__values animate-on-scroll">
+                        <div class="about__value">
+                            <div class="about__value-icon">◈</div>
+                            <div><h4>Precision</h4><p>Every detail considered</p></div>
+                        </div>
+                        <div class="about__value">
+                            <div class="about__value-icon">◈</div>
+                            <div><h4>Sustainability</h4><p>Building for the future</p></div>
+                        </div>
+                        <div class="about__value">
+                            <div class="about__value-icon">◈</div>
+                            <div><h4>Innovation</h4><p>Redefining possibilities</p></div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn--primary animate-on-scroll">Work With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label animate-on-scroll">What We Do</div>
+                <h2 class="section-title animate-on-scroll">Our Services</h2>
+                <p class="section-subtitle animate-on-scroll">From initial concept to final construction, we guide every phase of your project.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card__number">01</div>
+                    <div class="service-card__icon"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 16h32M14 8v8" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                    <h3 class="service-card__title">Architectural Design</h3>
+                    <p class="service-card__desc">Comprehensive design services from concept sketches to construction documents, tailored to your vision and budget.</p>
+                    <div class="service-card__arrow">→</div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card__number">02</div>
+                    <div class="service-card__icon"><svg viewBox="0 0 40 40" fill="none"><path d="M8 32V16l12-8 12 8v16" stroke="currentColor" stroke-width="1.5"/><rect x="15" y="22" width="10" height="10" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                    <h3 class="service-card__title">Residential Projects</h3>
+                    <p class="service-card__desc">Luxury homes, villas, and apartment complexes designed with meticulous attention to lifestyle and comfort.</p>
+                    <div class="service-card__arrow">→</div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card__number">03</div>
+                    <div class="service-card__icon"><svg viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="28" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 20h28M20 6v28" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                    <h3 class="service-card__title">Commercial Architecture</h3>
+                    <p class="service-card__desc">Office towers, retail spaces, and hospitality venues that make a powerful statement and perform brilliantly.</p>
+                    <div class="service-card__arrow">→</div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card__number">04</div>
+                    <div class="service-card__icon"><svg viewBox="0 0 40 40" fill="none"><path d="M8 32h24M12 32V16M28 32V16M6 16h28M20 8l14 8H6l14-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+                    <h3 class="service-card__title">Interior Design</h3>
+                    <p class="service-card__desc">Seamless interior environments that reflect personality and purpose, crafted from material selection to final styling.</p>
+                    <div class="service-card__arrow">→</div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card__number">05</div>
+                    <div class="service-card__icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M20 8v24M8 20h24M12 12l16 16M28 12L12 28" stroke="currentColor" stroke-width="1"/></svg></div>
+                    <h3 class="service-card__title">Urban Planning</h3>
+                    <p class="service-card__desc">Large-scale masterplanning and mixed-use developments that shape the future character of communities.</p>
+                    <div class="service-card__arrow">→</div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card__number">06</div>
+                    <div class="service-card__icon"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="12" width="24" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M14 12V8h12v4M20 18v6M17 24h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                    <h3 class="service-card__title">3D Visualization</h3>
+                    <p class="service-card__desc">Photorealistic renders and walkthroughs that bring your project to life before a single brick is laid.</p>
+                    <div class="service-card__arrow">→</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label animate-on-scroll">Our Work</div>
+                <h2 class="section-title animate-on-scroll">Selected Projects</h2>
+                <p class="section-subtitle animate-on-scroll">A curated selection of our most celebrated architectural achievements.</p>
+            </div>
+            <div class="portfolio__grid">
+                <div class="portfolio-card portfolio-card--large animate-on-scroll">
+                    <div class="portfolio-card__media" style="background-image: url('https://d8j0ntlcm91z4.cloudfront.net/user_3Fqn08064RkBJPwhFaWnRQxaNiZ/hf_20260630_112822_eedb4c7c-f81b-437b-b1e2-7d5ecc97259e.png');"></div>
+                    <div class="portfolio-card__overlay">
+                        <div class="portfolio-card__info">
+                            <span class="portfolio-card__category">Commercial</span>
+                            <h3 class="portfolio-card__title">Glass Tower Tirana</h3>
+                            <p class="portfolio-card__year">2024</p>
+                        </div>
+                        <div class="portfolio-card__link">View Project →</div>
+                    </div>
+                </div>
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-card__media" style="background-image: url('https://d8j0ntlcm91z4.cloudfront.net/user_3Fqn08064RkBJPwhFaWnRQxaNiZ/hf_20260630_112835_27563a17-5aa5-4b0b-97f5-7213fee90f5a.png');"></div>
+                    <div class="portfolio-card__overlay">
+                        <div class="portfolio-card__info">
+                            <span class="portfolio-card__category">Commercial</span>
+                            <h3 class="portfolio-card__title">Meridian Office Complex</h3>
+                            <p class="portfolio-card__year">2023</p>
+                        </div>
+                        <div class="portfolio-card__link">View Project →</div>
+                    </div>
+                </div>
+                <div class="portfolio-card portfolio-card--tall animate-on-scroll">
+                    <div class="portfolio-card__media" style="background-image: url('https://d8j0ntlcm91z4.cloudfront.net/user_3Fqn08064RkBJPwhFaWnRQxaNiZ/hf_20260630_112952_91274888-9672-4932-88c5-9b7d23005a48.png');"></div>
+                    <div class="portfolio-card__overlay">
+                        <div class="portfolio-card__info">
+                            <span class="portfolio-card__category">Residential</span>
+                            <h3 class="portfolio-card__title">Villa Lumiera</h3>
+                            <p class="portfolio-card__year">2023</p>
+                        </div>
+                        <div class="portfolio-card__link">View Project →</div>
+                    </div>
+                </div>
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-card__media portfolio-card__media--gradient-1"></div>
+                    <div class="portfolio-card__overlay">
+                        <div class="portfolio-card__info">
+                            <span class="portfolio-card__category">Residential</span>
+                            <h3 class="portfolio-card__title">Prroni Residences</h3>
+                            <p class="portfolio-card__year">2022</p>
+                        </div>
+                        <div class="portfolio-card__link">View Project →</div>
+                    </div>
+                </div>
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-card__media portfolio-card__media--gradient-2"></div>
+                    <div class="portfolio-card__overlay">
+                        <div class="portfolio-card__info">
+                            <span class="portfolio-card__category">Urban</span>
+                            <h3 class="portfolio-card__title">Rinia Cultural Hub</h3>
+                            <p class="portfolio-card__year">2022</p>
+                        </div>
+                        <div class="portfolio-card__link">View Project →</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stats-section__bg" style="background-image: url('https://d8j0ntlcm91z4.cloudfront.net/user_3Fqn08064RkBJPwhFaWnRQxaNiZ/hf_20260630_112822_eedb4c7c-f81b-437b-b1e2-7d5ecc97259e.png');"></div>
+        <div class="stats-section__overlay"></div>
+        <div class="container">
+            <div class="stats-section__grid">
+                <div class="stats-item animate-on-scroll">
+                    <span class="stats-item__number counter" data-target="15">0</span>
+                    <span class="stats-item__suffix">+</span>
+                    <span class="stats-item__label">Years of Excellence</span>
+                </div>
+                <div class="stats-item animate-on-scroll">
+                    <span class="stats-item__number counter" data-target="120">0</span>
+                    <span class="stats-item__suffix">+</span>
+                    <span class="stats-item__label">Projects Completed</span>
+                </div>
+                <div class="stats-item animate-on-scroll">
+                    <span class="stats-item__number counter" data-target="18">0</span>
+                    <span class="stats-item__suffix"></span>
+                    <span class="stats-item__label">International Awards</span>
+                </div>
+                <div class="stats-item animate-on-scroll">
+                    <span class="stats-item__number counter" data-target="98">0</span>
+                    <span class="stats-item__suffix">%</span>
+                    <span class="stats-item__label">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process section" id="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label animate-on-scroll">How We Work</div>
+                <h2 class="section-title animate-on-scroll">Our Design Process</h2>
+                <p class="section-subtitle animate-on-scroll">A proven methodology that delivers exceptional results, every time.</p>
+            </div>
+            <div class="process__steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">01</div>
+                    <div class="process-step__content">
+                        <h3>Discovery &amp; Brief</h3>
+                        <p>We start by deeply understanding your vision, needs, site constraints, and budget — asking the right questions to define the perfect brief.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">02</div>
+                    <div class="process-step__content">
+                        <h3>Concept Design</h3>
+                        <p>Our team explores multiple design directions through sketches, mood boards, and conceptual models, narrowing toward the optimal solution.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">03</div>
+                    <div class="process-step__content">
+                        <h3>Design Development</h3>
+                        <p>The approved concept is refined into detailed plans, elevations, sections, and 3D visualizations, with material and specification decisions made.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">04</div>
+                    <div class="process-step__content">
+                        <h3>Construction Documents</h3>
+                        <p>Complete technical drawings and specifications are prepared for permitting and tendering, ensuring every contractor has what they need.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">05</div>
+                    <div class="process-step__content">
+                        <h3>Construction Administration</h3>
+                        <p>We oversee the build, visiting site regularly to ensure the design intent is maintained and quality standards are met throughout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-label animate-on-scroll" style="text-align:center">What Clients Say</div>
+            <div class="testimonials__slider" id="testimonials-slider">
+                <div class="testimonial active">
+                    <blockquote class="testimonial__quote">"Perparim and his team transformed our vision into something far beyond our expectations. The attention to detail and quality of workmanship is extraordinary."</blockquote>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">AF</div>
+                        <div><strong>Arben Fortuzi</strong><span>CEO, Fortuzi Group</span></div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <blockquote class="testimonial__quote">"ModulProjekt delivered our office headquarters on time and within budget. The space has completely transformed how our team works and how clients perceive us."</blockquote>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">EM</div>
+                        <div><strong>Elisa Mancini</strong><span>Director, Mancini Developments</span></div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <blockquote class="testimonial__quote">"Working with Perparim Çalaj was a pleasure from start to finish. His ability to listen, adapt, and create is unmatched in the industry."</blockquote>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar">DK</div>
+                        <div><strong>Dritan Koci</strong><span>Private Client</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__nav">
+                <button class="testimonials__btn" id="prev-btn">←</button>
+                <div class="testimonials__dots" id="dots"></div>
+                <button class="testimonials__btn" id="next-btn">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <div class="section-label animate-on-scroll">Get In Touch</div>
+                    <h2 class="section-title animate-on-scroll">Let's Build<br><em>Together</em></h2>
+                    <p class="animate-on-scroll" style="color: var(--gray-light);">Ready to start your project? We'd love to hear about your vision and explore how we can bring it to life.</p>
+                    <div class="contact__details animate-on-scroll">
+                        <div class="contact__detail">
+                            <span class="contact__detail-label">Studio</span>
+                            <span>Rruga Ismail Qemali, Tirana, Albania</span>
+                        </div>
+                        <div class="contact__detail">
+                            <span class="contact__detail-label">Email</span>
+                            <span>studio@modulprojekt.al</span>
+                        </div>
+                        <div class="contact__detail">
+                            <span class="contact__detail-label">Phone</span>
+                            <span>+355 69 XXX XXXX</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form animate-on-scroll" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="project-type" name="project-type">
+                            <option value="">Project Type</option>
+                            <option>Residential</option>
+                            <option>Commercial</option>
+                            <option>Interior Design</option>
+                            <option>Urban Planning</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Tell Us About Your Project</label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Send Message →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="nav__logo">
+                        <span class="nav__logo-mark">M</span>
+                        <span class="nav__logo-text">ModulProjekt</span>
+                    </a>
+                    <p>Architecture by Perparim Çalaj.<br>Designing the future of Albania and beyond.</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h4>Studio</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#process">Process</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Architectural Design</a></li>
+                            <li><a href="#services">Residential</a></li>
+                            <li><a href="#services">Commercial</a></li>
+                            <li><a href="#services">Interior Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>Tirana, Albania</li>
+                            <li>studio@modulprojekt.al</li>
+                            <li>+355 69 XXX XXXX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 ModulProjekt. All rights reserved. Perparim Çalaj, Architect.</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="LinkedIn">LI</a>
+                    <a href="#" aria-label="Behance">BE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
